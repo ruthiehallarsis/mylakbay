@@ -9,7 +9,6 @@ It may be helpful to review some examples of integration from the
 pathauto_node.inc, pathauto_taxonomy.inc, and pathauto_user.inc files.
 
 
-
 ==================
 1 - Providing additional tokens
 ==================
