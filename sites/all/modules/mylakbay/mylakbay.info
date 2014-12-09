@@ -1,0 +1,5 @@
+core = 7.x
+description = Initial Custom Module for MyLakbay
+name = MyLakbay Custom Module
+package = MyLakbay
+version = 7.x-1.0

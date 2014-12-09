@@ -1,0 +1,30 @@
+<?php 
+
+/*
+* Implements hook_menu().
+*/
+function mylakbay_menu() {
+
+  $items = array();
+
+  $items['cms/set-config'] = array(
+    'title' => 'MyLakbay Configuration',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('_mylakbay_set_config_form'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'mylakbay.admin.inc',
+  );
+
+  $items['mylakbay'] = array(
+    'page callback' => '_mylakbay_main_page',
+    'access arguments' => array( 'access content' ),
+    'title' => 'Self-Service',
+  );
+}
+
+function _mylakbay_main_page() {
+
+  echo "<b>MAHAL NA MAHAL KITA BIBE KO!<b/>";
+
+}
