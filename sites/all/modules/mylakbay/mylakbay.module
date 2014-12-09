@@ -26,7 +26,8 @@ function mylakbay_menu() {
 }
 
 function _mylakbay_main_page() {
-
-  echo "<b>MAHAL NA MAHAL KITA BIBE KO!<b/>";
-
+  $self_mylakbay = array(
+      '#theme' => 'mylakbay'
+  );
+  return drupal_render($self_mylakbay);
 }
