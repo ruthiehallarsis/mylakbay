@@ -21,6 +21,8 @@ function mylakbay_menu() {
     'access arguments' => array( 'access content' ),
     'title' => 'Self-Service',
   );
+
+  return $items;
 }
 
 function _mylakbay_main_page() {
