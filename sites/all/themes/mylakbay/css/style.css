@@ -1,64 +1,76 @@
+@font-face {
+  font-family: 'CABNDWeb-Bold';
+  src: url("../fonts/CABNDWeb-Bold.eot");
+  src: url("../fonts/CABNDWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CABNDWeb-Bold.woff") format("woff"), url("../fonts/CABNDWeb-Bold.ttf") format("truetype"), url("../fonts/CABNDWeb-Bold.svg#helvetica-boldregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Variables */
-/* line 9, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 html, body {
   height: 100%;
   width: 100%;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 body {
   position: fixed;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 .page-mylakbay .main-container.container {
   width: 100%;
   padding-right: 0px;
   padding-left: 0px;
   height: 100%;
-  background: gray;
+  background: url(../images/back.jpg) repeat;
 }
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 .page-mylakbay .main-container.container #mapContainer {
   width: 75% !important;
   float: right !important;
   height: 100% !important;
   background: #fff;
 }
-/* line 38, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions {
   overflow: auto;
   z-index: 0;
   height: auto !important;
 }
-/* line 42, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions ol {
   background: #fff;
   margin-bottom: 0px;
 }
-/* line 47, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 .page-mylakbay .main-container.container #left-side {
   width: 25%;
   float: left;
   height: 100%;
   overflow-y: auto;
 }
-/* line 54, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 .page-mylakbay .main-container.container #left-side > div {
   width: 100% !important;
 }
-/* line 59, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
+.page-mylakbay #fromSearchBox > span,
+.page-mylakbay #toSearchBox > span {
+  display: none;
+}
+/* line 65, ../sass/style.scss */
 .page-mylakbay #fromSearchBox,
 .page-mylakbay #toSearchBox {
   margin-top: 15px;
   position: relative;
 }
-/* line 63, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .page-mylakbay #fromSearchBox span,
 .page-mylakbay #toSearchBox span {
   color: #fff;
 }
-/* line 66, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .page-mylakbay #fromSearchBox input,
 .page-mylakbay #toSearchBox input {
   width: 100%;
@@ -66,13 +78,21 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
-  color: #6e6e6e;
+  color: #fff;
+  background: #393473;
+  -webkit-box-shadow: inset 0 0 2px 2px #2f2a69;
+  -moz-box-shadow: inset 0 0 2px 2px #2f2a69;
+  box-shadow: inset 0 0 2px 2px #2f2a69;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-family: 'CABNDWeb-Bold';
 }
-/* line 74, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list,
 .page-mylakbay #toSearchBox .search-list {
   position: absolute;
-  top: 75px;
+  top: 58px;
   background: #e1e1e1;
   color: #8c8c8c;
   width: 100%;
@@ -80,40 +100,82 @@ body {
   z-index: 1;
   border-radius: 10px;
 }
-/* line 83, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl,
 .page-mylakbay #toSearchBox .search-list dl {
   margin: 0px;
 }
-/* line 85, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd,
 .page-mylakbay #toSearchBox .search-list dl dd {
   padding: 10px 10px 10px 25px;
   display: block;
 }
-/* line 89, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd:hover span,
 .page-mylakbay #toSearchBox .search-list dl dd:hover span {
   color: #e10000;
 }
-/* line 93, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd span,
 .page-mylakbay #toSearchBox .search-list dl dd span {
   color: #787878;
 }
-/* line 98, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dt.title,
 .page-mylakbay #toSearchBox .search-list dl dt.title {
   padding: 10px 10px 5px 10px;
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 105, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl .suggest-search dd:last-child span,
 .page-mylakbay #toSearchBox .search-list dl .suggest-search dd:last-child span {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 114, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
+.page-mylakbay #fromSearchBox ::-webkit-input-placeholder,
+.page-mylakbay #toSearchBox ::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: 700;
+  font-family: 'CABNDWeb-Bold';
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 133, ../sass/style.scss */
+.page-mylakbay #fromSearchBox :-moz-placeholder,
+.page-mylakbay #toSearchBox :-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+  font-weight: 700;
+  font-family: 'CABNDWeb-Bold';
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 141, ../sass/style.scss */
+.page-mylakbay #fromSearchBox ::-moz-placeholder,
+.page-mylakbay #toSearchBox ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+  font-weight: 700;
+  font-family: 'CABNDWeb-Bold';
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 149, ../sass/style.scss */
+.page-mylakbay #fromSearchBox :-ms-input-placeholder,
+.page-mylakbay #toSearchBox :-ms-input-placeholder {
+  color: #fff;
+  font-weight: 700;
+  font-family: 'CABNDWeb-Bold';
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 158, ../sass/style.scss */
 .page-mylakbay input[type='button'] {
   width: 100%;
   border: none;
@@ -121,10 +183,20 @@ body {
   border-radius: 10px;
   margin-top: 20px;
   color: #fff;
-  font-weight: 900;
-  background: #32b232;
+  font-weight: 700;
+  background: #ddb40f;
+  font-family: 'CABNDWeb-Bold';
+  text-transform: uppercase;
+  outline: none;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px 6px #a17800;
+  -moz-box-shadow: inset 0 0 6px 6px #a17800;
+  box-shadow: inset 0 0 6px 6px #a17800;
+  border: 1px solid #ddb40f;
 }
-/* line 124, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .page-mylakbay input[type='button']:hover {
-  background: #149414;
+  background: #e7be19;
 }

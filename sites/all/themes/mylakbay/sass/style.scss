@@ -1,3 +1,4 @@
+@import 'fonts';
 
 /* Variables */
 
@@ -27,7 +28,7 @@ body {
     padding-right: 0px;
     padding-left: 0px;
     height: 100%;
-    background: gray;
+    background: url(../images/back.jpg) repeat;
     
     #mapContainer {
       width: 75% !important;
@@ -55,7 +56,12 @@ body {
       width: 100% !important;
     }
   }
-  
+
+  #fromSearchBox > span,
+  #toSearchBox > span {
+    display: none;
+  }
+
   #fromSearchBox,
   #toSearchBox {
     margin-top: 15px;
@@ -69,11 +75,18 @@ body {
       border-radius: 10px;
       border: none;
       outline: none;
-      color: #000 + 110;
+      color: #fff;
+      background: #433e7d- 10;
+      -webkit-box-shadow: inset 0 0 2px 2px #433e7d - 20;
+      -moz-box-shadow: inset 0 0 2px 2px #433e7d - 20;
+      box-shadow: inset 0 0 2px 2px #433e7d - 20;
+      @include font-size(30);
+      text-transform: uppercase;
+      font-family: 'CABNDWeb-Bold';
     }
     .search-list {
       position: absolute;
-      top: 75px;
+      top: 58px;
       background: #fff - 30;
       color: #000 + 140;
       width: 100%;
@@ -109,6 +122,37 @@ body {
         }
       }
     }
+    ::-webkit-input-placeholder {
+      color: #fff;
+      font-weight: 700;
+      font-family: 'CABNDWeb-Bold';
+      @include font-size(30);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: #fff;
+      font-weight: 700;
+      font-family: 'CABNDWeb-Bold';
+      @include font-size(30);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3); 
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: #fff;
+      font-weight: 700;
+      font-family: 'CABNDWeb-Bold';
+      @include font-size(30);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3);  
+    }
+
+    :-ms-input-placeholder {  
+      color: #fff;
+      font-weight: 700;
+      font-family: 'CABNDWeb-Bold';
+      @include font-size(30);
+      text-shadow: 2px 4px 3px rgba(0,0,0,0.3); 
+    }
   }
 
   input[type='button']{
@@ -118,11 +162,21 @@ body {
     border-radius: 10px;
     margin-top: 20px;
     color: #fff;
-    font-weight: 900;
-    background: green + 50;
+    font-weight: 700;
+    background: #ddb40f;
+    font-family: 'CABNDWeb-Bold';
+    text-transform: uppercase;
+    outline: none;
+    @include font-size(30);
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);  
+
+    -webkit-box-shadow: inset 0 0 6px 6px #ddb40f - 60;
+    -moz-box-shadow: inset 0 0 6px 6px #ddb40f - 60;
+    box-shadow: inset 0 0 6px 6px #ddb40f - 60;
+    border: 1px solid #ddb40f;
 
     &:hover {
-      background: green + 20;
+      background: #ddb40f + 10;
     }
   }
   
