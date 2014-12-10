@@ -94,19 +94,19 @@
       <div id="fromSearchBox" class="main-search">
         <span class ="caption">Start location:</span>
         <div module="SearchBox">
-          <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="STARTING PLACE"/>
+          <input rel="searchbox-input" id="start_location" class="search-box-bckgrnd" type="text" placeholder="STARTING PLACE"/>
           <div rel="searchbox-list" class="search-list"></div>
         </div>
       </div>
       <div id="toSearchBox" class="main-search">
         <span class ="caption">End location:</span>
         <div module="SearchBox">
-          <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="DESTINATION"/>
+          <input rel="searchbox-input" id="end_location" class="search-box-bckgrnd" type="text" placeholder="DESTINATION"/>
           <div rel="searchbox-list" class="search-list"></div>
         </div>
       </div>
       <input type="button" id="findRoute" value="Find Route" />
-      <input type="button" id="modal-trigger" value="modal" />
+      <input type="button" id="modal-trigger" value="See Results" />
       </br/>
     </div>
     <div id="directions" style="float:left; color: rgb(102, 102, 102);height:334px;overflow:auto;width:500px; max-width: 500px;"></div>
@@ -119,11 +119,14 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Confirmation</h4>
+          <h4 class="modal-title">Your Lakbay!</h4>
         </div>
         <div class="modal-body">
-          <p>Do you want to save changes you made to document before closing?</p>
-          <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+          <p><span id="mod-start"></span> to <span id="mod-end"></span></p> <br/>
+          <p>Car</p><br/>
+          <p><span id="mod-car-text"></span></p><br/><br/>
+          <p>Walk</p><br/>
+          <p><span id="mod-pedestrian-text"></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -219,4 +222,5 @@ function afterHereMapLoad(theMap) {
 }
 //]]>
 </script>
+
 

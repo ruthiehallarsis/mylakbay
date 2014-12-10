@@ -62,7 +62,10 @@ function _heremaps_geocode_routing($param) {
 }
 
 function _show_result_ajax() {
-  $data = 'searchtext=Manila&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $start = $_GET['start'];
+  $end = $_GET['end'];
+
+  $data = 'searchtext=' . $start . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
   $r_data = _heremaps_geocode_free_form($data);
 
   $r_array_view = $r_data->Response->View;
@@ -71,7 +74,7 @@ function _show_result_ajax() {
   $longitude0 = $r_array_result[0]->Location->DisplayPosition->Longitude;
   $waypoint0 = $latitude0 . ',' . $longitude0;
 
-  $data = 'searchtext=Mandaluyong&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $data = 'searchtext=' . $end . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
   $r_data = _heremaps_geocode_free_form($data);
 
   $r_array_view = $r_data->Response->View;
@@ -80,11 +83,25 @@ function _show_result_ajax() {
   $longitude1 = $r_array_result[0]->Location->DisplayPosition->Longitude;
   $waypoint1 = $latitude1 . ',' . $longitude1;
 
+  // Car
   $data = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;car&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data = _heremaps_geocode_routing($data);
+  
+  $r_array_route = $r_data->response->route;
+  $car_route_distance = $r_array_route[0]->summary->distance;
+  $car_route_travel_time = $r_array_route[0]->summary->travelTime;
+  $car_route_text = $r_array_route[0]->summary->text;
+
+  // Pedestrian
+  $data = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;pedestrian&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
   $r_data = _heremaps_geocode_routing($data);
 
   $r_array_route = $r_data->response->route;
-  $route_distance = $r_array_route[0]->summary->distance;
-  $route_travel_time = $r_array_route[0]->summary->travelTime;
-  $route_text = $r_array_route[0]->summary->text;
+  $pedestrian_route_distance = $r_array_route[0]->summary->distance;
+  $pedestrian_route_travel_time = $r_array_route[0]->summary->travelTime;
+  $pedestrian_route_text = $r_array_route[0]->summary->text;
+
+  $ary = array("start_loc"=>$start,"end_loc"=>$end,"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text);
+  echo json_encode($ary);
+
 }
