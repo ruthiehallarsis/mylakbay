@@ -89,31 +89,50 @@
   <link href="<?php print $GLOBALS['base_url'] . '/' . path_to_theme(); ?>/css/routing.css" rel="stylesheet"/>
 
 <div class="main-container container">
-
-  <div style="width:500px; padding: 1em;">
-    <a class="anchor" name="Customized suggestion list"></a>
-    <div id="fromSearchBox" class="main-search">
-      <span class ="caption">from:</span>
-      <div module="SearchBox">
-        <input rel="searchbox-input" class="search-box-bckgrnd" type="text" />
-        <div rel="searchbox-list" class="search-list"></div>
-      </div>
-    </div>
-    <div id="toSearchBox" class="main-search">
-      <span class ="caption">To:</span>
-      <div module="SearchBox">
-        <input rel="searchbox-input" class="search-box-bckgrnd" type="text" />
-        <div rel="searchbox-list" class="search-list"></div>
-      </div>
-    </div>
-
-    <input type="button" id="findRoute" value="Find Route" />
-    </br/>
-  </div>
-
   <div id="mapContainer" style="width:540px; height:334px;float:left;" class="no-expand"></div>
-  <div id="directions" style="float:left; color: rgb(102, 102, 102);height:334px;overflow:auto;width:500px; max-width: 500px;"></div>
+  <div id="left-side">
+    <div style="width:500px; padding: 1em;">
+      <a class="anchor" name="Customized suggestion list"></a>
+      <div id="fromSearchBox" class="main-search">
+        <span class ="caption">from:</span>
+        <div module="SearchBox">
+          <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="STARTING PLACE"/>
+          <div rel="searchbox-list" class="search-list"></div>
+        </div>
+      </div>
+      <div id="toSearchBox" class="main-search">
+        <span class ="caption">To:</span>
+        <div module="SearchBox">
+          <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="DESTINATION"/>
+          <div rel="searchbox-list" class="search-list"></div>
+        </div>
+      </div>
+      <input type="button" id="findRoute" value="Find Route" />
+      <input type="button" id="modal-trigger" value="modal" />
+      </br/>
+    </div>
+    <div id="directions" style="float:left; color: rgb(102, 102, 102);height:334px;overflow:auto;width:500px; max-width: 500px;"></div>
+  </div>
+</div>
 
+<div class="bs-example">
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to save changes you made to document before closing?</p>
+          <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script  id="example-code" data-categories="routing,library" type="text/javascript" >
