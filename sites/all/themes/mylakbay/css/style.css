@@ -10,28 +10,72 @@ body {
   position: fixed;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
+.page-mylakbay * {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 28, ../sass/style.scss */
 .page-mylakbay .main-container.container {
   width: 100%;
   padding-right: 0px;
   padding-left: 0px;
   height: 100%;
+  background: gray;
 }
-/* line 25, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 .page-mylakbay .main-container.container #mapContainer {
   width: 75% !important;
   float: right !important;
   height: 100% !important;
 }
-/* line 30, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions {
   float: left;
   width: 25% !important;
 }
-/* line 36, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .page-mylakbay .main-container.container > div {
   z-index: 1;
   position: relative;
   float: left;
   width: 25% !important;
+}
+/* line 53, ../sass/style.scss */
+.page-mylakbay #fromSearchBox,
+.page-mylakbay #toSearchBox {
+  margin-top: 15px;
+}
+/* line 56, ../sass/style.scss */
+.page-mylakbay #fromSearchBox span,
+.page-mylakbay #toSearchBox span {
+  color: #fff;
+}
+/* line 59, ../sass/style.scss */
+.page-mylakbay #fromSearchBox input,
+.page-mylakbay #toSearchBox input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #6e6e6e;
+}
+/* line 69, ../sass/style.scss */
+.page-mylakbay input[type='button'] {
+  width: 100%;
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 900;
+  background: #32b232;
+}
+/* line 79, ../sass/style.scss */
+.page-mylakbay input[type='button']:hover {
+  background: #149414;
 }

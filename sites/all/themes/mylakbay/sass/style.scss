@@ -15,12 +15,22 @@ body {
   position: fixed;
 }
 
-.page-mylakbay {
+.page-mylakbay * {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.page-mylakbay  {
+
   .main-container.container {
     width: 100%;
     padding-right: 0px;
     padding-left: 0px;
     height: 100%;
+    background: gray;
     
     #mapContainer {
       width: 75% !important;
@@ -40,5 +50,35 @@ body {
     width: 25% !important;
   }
   
+  #fromSearchBox,
+  #toSearchBox {
+    margin-top: 15px;
+    span {
+      color: #fff;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      color: #000 + 110;
+    }
+  }
+
+  input[type='button']{
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 900;
+    background: green + 50;
+
+    &:hover {
+      background: green + 20;
+    }
+  }
   
 }
