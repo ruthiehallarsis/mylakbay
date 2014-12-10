@@ -1,0 +1,44 @@
+
+/* Variables */
+
+$base-width: 980px;
+$theme-blue: #0073ba;
+$theme-red: #c11e23;
+$theme-gray-p: #666666;
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: fixed;
+}
+
+.page-mylakbay {
+  .main-container.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 100%;
+    
+    #mapContainer {
+      width: 75% !important;
+      float: right !important;
+      height: 100% !important;
+    }
+    #directions {
+      float: left;
+      width: 25% !important;
+    }
+  }
+
+  .main-container.container > div {
+    z-index: 1;
+    position: relative;
+    float: left;
+    width: 25% !important;
+  }
+  
+  
+}

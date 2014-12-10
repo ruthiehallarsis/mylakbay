@@ -1,4 +1,37 @@
-/**
- * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
- * remove this comment and start adding your styles to this file.
- */
+/* Variables */
+/* line 9, ../sass/style.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 14, ../sass/style.scss */
+body {
+  position: fixed;
+}
+
+/* line 19, ../sass/style.scss */
+.page-mylakbay .main-container.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  height: 100%;
+}
+/* line 25, ../sass/style.scss */
+.page-mylakbay .main-container.container #mapContainer {
+  width: 75% !important;
+  float: right !important;
+  height: 100% !important;
+}
+/* line 30, ../sass/style.scss */
+.page-mylakbay .main-container.container #directions {
+  float: left;
+  width: 25% !important;
+}
+/* line 36, ../sass/style.scss */
+.page-mylakbay .main-container.container > div {
+  z-index: 1;
+  position: relative;
+  float: left;
+  width: 25% !important;
+}

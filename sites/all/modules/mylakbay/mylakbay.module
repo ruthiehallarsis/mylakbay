@@ -27,7 +27,7 @@ function mylakbay_menu() {
 
 function _mylakbay_main_page() {
   $self_mylakbay = array(
-      '#theme' => 'mylakbay'
+    '#theme' => 'mylakbay'
   );
   return drupal_render($self_mylakbay);
 }
