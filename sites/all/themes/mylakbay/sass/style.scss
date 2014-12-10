@@ -16,10 +16,7 @@ body {
 }
 
 .page-mylakbay * {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+
 }
 
 
@@ -36,10 +33,13 @@ body {
       width: 75% !important;
       float: right !important;
       height: 100% !important;
+      background: #fff;
     }
     #directions {
       float: left;
       width: 25% !important;
+      background: #fff;
+      height: auto !important;
     }
   }
 
@@ -53,6 +53,7 @@ body {
   #fromSearchBox,
   #toSearchBox {
     margin-top: 15px;
+    position: relative;
     span {
       color: #fff;
     }
@@ -63,6 +64,44 @@ body {
       border: none;
       outline: none;
       color: #000 + 110;
+    }
+    .search-list {
+      position: absolute;
+      top: 75px;
+      background: #fff - 30;
+      color: #000 + 140;
+      width: 100%;
+      border: 1px solid #000 + 150;
+      z-index: 1;
+      border-radius: 10px;
+      dl {
+        margin: 0px;
+        dd {
+          padding: 10px 10px 10px 25px;
+          display: block;
+          &:hover {
+            span {
+              color: red - 30;
+            }
+          }
+          span {
+            color: #000 + 120;
+          }
+        }
+      }
+      dl dt.title {
+        padding: 10px 10px 5px 10px;
+        border-bottom: 1px solid #fff - 50;
+      }
+
+      dl .suggest-search {
+        dd:last-child {
+          span {
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+          }
+        }
+      }
     }
   }
 
