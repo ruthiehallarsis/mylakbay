@@ -31,26 +31,27 @@ body {
   width: 25% !important;
   background: #fff;
   height: auto !important;
+  z-index: 0;
 }
-/* line 46, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .page-mylakbay .main-container.container > div {
   z-index: 1;
   position: relative;
   float: left;
   width: 25% !important;
 }
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .page-mylakbay #fromSearchBox,
 .page-mylakbay #toSearchBox {
   margin-top: 15px;
   position: relative;
 }
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .page-mylakbay #fromSearchBox span,
 .page-mylakbay #toSearchBox span {
   color: #fff;
 }
-/* line 60, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .page-mylakbay #fromSearchBox input,
 .page-mylakbay #toSearchBox input {
   width: 100%;
@@ -60,7 +61,7 @@ body {
   outline: none;
   color: #6e6e6e;
 }
-/* line 68, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list,
 .page-mylakbay #toSearchBox .search-list {
   position: absolute;
@@ -72,40 +73,40 @@ body {
   z-index: 1;
   border-radius: 10px;
 }
-/* line 77, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl,
 .page-mylakbay #toSearchBox .search-list dl {
   margin: 0px;
 }
-/* line 79, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd,
 .page-mylakbay #toSearchBox .search-list dl dd {
   padding: 10px 10px 10px 25px;
   display: block;
 }
-/* line 83, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd:hover span,
 .page-mylakbay #toSearchBox .search-list dl dd:hover span {
   color: #e10000;
 }
-/* line 87, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd span,
 .page-mylakbay #toSearchBox .search-list dl dd span {
   color: #787878;
 }
-/* line 92, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dt.title,
 .page-mylakbay #toSearchBox .search-list dl dt.title {
   padding: 10px 10px 5px 10px;
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 99, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl .suggest-search dd:last-child span,
 .page-mylakbay #toSearchBox .search-list dl .suggest-search dd:last-child span {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 108, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .page-mylakbay input[type='button'] {
   width: 100%;
   border: none;
@@ -116,7 +117,7 @@ body {
   font-weight: 900;
   background: #32b232;
 }
-/* line 118, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .page-mylakbay input[type='button']:hover {
   background: #149414;
 }
