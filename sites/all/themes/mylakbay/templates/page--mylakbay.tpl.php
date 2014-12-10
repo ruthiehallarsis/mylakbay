@@ -75,8 +75,6 @@
 
 ?>
   <script type="text/javascript" src="<?php print $GLOBALS['base_url'] . '/' . path_to_theme(); ?>/js/heremaps/hereAppIdAndToken.js"></script>
-
-
   <script type="text/javascript" src="<?php print $GLOBALS['base_url'] . '/' . path_to_theme(); ?>/js/heremaps/jQl.min.js"></script>
   <script type="text/javascript" src="<?php print $GLOBALS['base_url'] . '/' . path_to_theme(); ?>/js/heremaps/hereAsyncLoader.js"
     id="HereMapsLoaderScript"
