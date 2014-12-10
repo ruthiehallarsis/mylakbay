@@ -92,14 +92,14 @@
     <div style="width:500px; padding: 1em;">
       <a class="anchor" name="Customized suggestion list"></a>
       <div id="fromSearchBox" class="main-search">
-        <span class ="caption">from:</span>
+        <span class ="caption">Start location:</span>
         <div module="SearchBox">
           <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="STARTING PLACE"/>
           <div rel="searchbox-list" class="search-list"></div>
         </div>
       </div>
       <div id="toSearchBox" class="main-search">
-        <span class ="caption">To:</span>
+        <span class ="caption">End location:</span>
         <div module="SearchBox">
           <input rel="searchbox-input" class="search-box-bckgrnd" type="text" placeholder="DESTINATION"/>
           <div rel="searchbox-list" class="search-list"></div>

@@ -22,12 +22,69 @@ function mylakbay_menu() {
     'title' => 'MyLakbay',
   );
 
+  $items['show-result'] = array(
+    'title' => 'Ajax Content',
+    'page callback' => '_show_result_ajax',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 
 function _mylakbay_main_page() {
+
   $self_mylakbay = array(
     '#theme' => 'mylakbay'
   );
   return drupal_render($self_mylakbay);
+}
+
+function _heremaps_geocode_free_form($param) {
+  $url = 'http://geocoder.cit.api.here.com/6.2/geocode.json?' . $param;
+  $response = drupal_http_request($url, array(
+    'method' => 'GET', 
+    'timeout' => 300,
+    'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'))
+  );
+  $r_data = json_decode($response->data);
+  return $r_data;  
+}
+
+function _heremaps_geocode_routing($param) {
+  $url = 'http://route.cit.api.here.com/routing/7.2/calculateroute.json?' . $param;
+  $response = drupal_http_request($url, array(
+    'method' => 'GET', 
+    'timeout' => 300,
+    'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'))
+  );
+  $r_data = json_decode($response->data);
+  return $r_data;  
+}
+
+function _show_result_ajax() {
+  $data = 'searchtext=Manila&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data = _heremaps_geocode_free_form($data);
+
+  $r_array_view = $r_data->Response->View;
+  $r_array_result = $r_array_view[0]->Result;
+  $latitude0 = $r_array_result[0]->Location->DisplayPosition->Latitude;
+  $longitude0 = $r_array_result[0]->Location->DisplayPosition->Longitude;
+  $waypoint0 = $latitude0 . ',' . $longitude0;
+
+  $data = 'searchtext=Mandaluyong&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data = _heremaps_geocode_free_form($data);
+
+  $r_array_view = $r_data->Response->View;
+  $r_array_result = $r_array_view[0]->Result;
+  $latitude1 = $r_array_result[0]->Location->DisplayPosition->Latitude;
+  $longitude1 = $r_array_result[0]->Location->DisplayPosition->Longitude;
+  $waypoint1 = $latitude1 . ',' . $longitude1;
+
+  $data = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;car&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data = _heremaps_geocode_routing($data);
+
+  $r_array_route = $r_data->response->route;
+  $route_distance = $r_array_route[0]->summary->distance;
+  $route_travel_time = $r_array_route[0]->summary->travelTime;
+  $route_text = $r_array_route[0]->summary->text;
 }
