@@ -1,0 +1,23 @@
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: unquote($size + 'px');
+  font-size: calculateRem($size);
+}
+
+@font-face {
+  font-family: 'CABNDWeb-Bold';
+  src: url('../fonts/CABNDWeb-Bold.eot');
+  src: url('../fonts/CABNDWeb-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CABNDWeb-Bold.woff') format('woff'),
+       url('../fonts/CABNDWeb-Bold.ttf') format('truetype'),
+       url('../fonts/CABNDWeb-Bold.svg#helvetica-boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
