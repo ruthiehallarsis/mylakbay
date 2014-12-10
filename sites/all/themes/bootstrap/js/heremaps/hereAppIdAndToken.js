@@ -9,9 +9,9 @@
     },
     // Initial center and zoom level of the map
     InitialLocation : {
-      longitude: 52.53,
-      latitude:  13.39,
-      zoomLevel: 14},
+      longitude: 14.5833,
+      latitude:  121.0333,
+      zoomLevel: 12},
 
     JSLibs  :{
       // versioned URL to load the HERE maps API.

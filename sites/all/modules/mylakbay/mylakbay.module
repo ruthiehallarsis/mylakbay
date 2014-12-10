@@ -19,7 +19,7 @@ function mylakbay_menu() {
   $items['mylakbay'] = array(
     'page callback' => '_mylakbay_main_page',
     'access arguments' => array( 'access content' ),
-    'title' => 'Self-Service',
+    'title' => 'MyLakbay',
   );
 
   return $items;
