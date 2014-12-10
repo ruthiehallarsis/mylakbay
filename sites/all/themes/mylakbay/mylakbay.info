@@ -53,7 +53,7 @@ stylesheets[all][] = css/style.css
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 ; settings[bootstrap_cdn] = ''
-
+scripts[] = 'js/script.js'
 
 ; ;-------------------------
 ; ; METHOD 2: Bootstrap CDN

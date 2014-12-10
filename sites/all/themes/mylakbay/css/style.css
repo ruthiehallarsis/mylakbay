@@ -27,31 +27,38 @@ body {
 }
 /* line 38, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions {
-  float: left;
-  width: 25% !important;
-  background: #fff;
-  height: auto !important;
+  overflow: auto;
   z-index: 0;
+  height: auto !important;
+}
+/* line 42, ../sass/style.scss */
+.page-mylakbay .main-container.container #directions ol {
+  background: #fff;
+  margin-bottom: 0px;
 }
 /* line 47, ../sass/style.scss */
-.page-mylakbay .main-container.container > div {
-  z-index: 1;
-  position: relative;
+.page-mylakbay .main-container.container #left-side {
+  width: 25%;
   float: left;
-  width: 25% !important;
+  height: 100%;
+  overflow-y: auto;
 }
 /* line 54, ../sass/style.scss */
+.page-mylakbay .main-container.container #left-side > div {
+  width: 100% !important;
+}
+/* line 59, ../sass/style.scss */
 .page-mylakbay #fromSearchBox,
 .page-mylakbay #toSearchBox {
   margin-top: 15px;
   position: relative;
 }
-/* line 58, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 .page-mylakbay #fromSearchBox span,
 .page-mylakbay #toSearchBox span {
   color: #fff;
 }
-/* line 61, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .page-mylakbay #fromSearchBox input,
 .page-mylakbay #toSearchBox input {
   width: 100%;
@@ -61,7 +68,7 @@ body {
   outline: none;
   color: #6e6e6e;
 }
-/* line 69, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list,
 .page-mylakbay #toSearchBox .search-list {
   position: absolute;
@@ -73,40 +80,40 @@ body {
   z-index: 1;
   border-radius: 10px;
 }
-/* line 78, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl,
 .page-mylakbay #toSearchBox .search-list dl {
   margin: 0px;
 }
-/* line 80, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd,
 .page-mylakbay #toSearchBox .search-list dl dd {
   padding: 10px 10px 10px 25px;
   display: block;
 }
-/* line 84, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd:hover span,
 .page-mylakbay #toSearchBox .search-list dl dd:hover span {
   color: #e10000;
 }
-/* line 88, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd span,
 .page-mylakbay #toSearchBox .search-list dl dd span {
   color: #787878;
 }
-/* line 93, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dt.title,
 .page-mylakbay #toSearchBox .search-list dl dt.title {
   padding: 10px 10px 5px 10px;
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 100, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl .suggest-search dd:last-child span,
 .page-mylakbay #toSearchBox .search-list dl .suggest-search dd:last-child span {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 109, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .page-mylakbay input[type='button'] {
   width: 100%;
   border: none;
@@ -117,7 +124,7 @@ body {
   font-weight: 900;
   background: #32b232;
 }
-/* line 119, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .page-mylakbay input[type='button']:hover {
   background: #149414;
 }

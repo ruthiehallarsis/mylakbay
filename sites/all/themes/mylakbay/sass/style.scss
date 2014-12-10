@@ -36,19 +36,24 @@ body {
       background: #fff;
     }
     #directions {
-      float: left;
-      width: 25% !important;
-      background: #fff;
-      height: auto !important;
+      overflow: auto;
       z-index: 0;
+      height: auto !important;
+      ol {
+        background: #fff;
+        margin-bottom: 0px;
+      }
     }
-  }
+    #left-side {
+      width: 25%;
+      float: left;
+      height: 100%;
+      overflow-y: auto;
+    }
 
-  .main-container.container > div {
-    z-index: 1;
-    position: relative;
-    float: left;
-    width: 25% !important;
+    #left-side > div {
+      width: 100% !important;
+    }
   }
   
   #fromSearchBox,
