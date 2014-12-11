@@ -37,6 +37,7 @@ function _mylakbay_main_page() {
     '#theme' => 'mylakbay'
   );
   return drupal_render($self_mylakbay);
+
 }
 
 function _heremaps_geocode_free_form($param) {
@@ -62,46 +63,62 @@ function _heremaps_geocode_routing($param) {
 }
 
 function _show_result_ajax() {
-  $start = $_GET['start'];
-  $end = $_GET['end'];
+  $start = urlencode($_GET['start']);
+  $end = urlencode($_GET['end']);
 
-  $data = 'searchtext=' . $start . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
-  $r_data = _heremaps_geocode_free_form($data);
+  $data_start = 'searchtext=' . $start . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data_start = _heremaps_geocode_free_form($data_start);
 
-  $r_array_view = $r_data->Response->View;
-  $r_array_result = $r_array_view[0]->Result;
-  $latitude0 = $r_array_result[0]->Location->DisplayPosition->Latitude;
-  $longitude0 = $r_array_result[0]->Location->DisplayPosition->Longitude;
-  $waypoint0 = $latitude0 . ',' . $longitude0;
+  $data_end = 'searchtext=' . $end . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+  $r_data_end = _heremaps_geocode_free_form($data_end);
 
-  $data = 'searchtext=' . $end . '&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
-  $r_data = _heremaps_geocode_free_form($data);
+  if (isset($r_data_start->Response->View) && isset($r_data_end->Response->View)) {
 
-  $r_array_view = $r_data->Response->View;
-  $r_array_result = $r_array_view[0]->Result;
-  $latitude1 = $r_array_result[0]->Location->DisplayPosition->Latitude;
-  $longitude1 = $r_array_result[0]->Location->DisplayPosition->Longitude;
-  $waypoint1 = $latitude1 . ',' . $longitude1;
+    $r_array_view = $r_data_start->Response->View;
+    $r_array_result = $r_array_view[0]->Result;
+    $latitude0 = $r_array_result[0]->Location->DisplayPosition->Latitude;
+    $longitude0 = $r_array_result[0]->Location->DisplayPosition->Longitude;
+    $waypoint0 = $latitude0 . ',' . $longitude0;
 
-  // Car
-  $data = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;car&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
-  $r_data = _heremaps_geocode_routing($data);
-  
-  $r_array_route = $r_data->response->route;
-  $car_route_distance = $r_array_route[0]->summary->distance;
-  $car_route_travel_time = $r_array_route[0]->summary->travelTime;
-  $car_route_text = $r_array_route[0]->summary->text;
+    $r_array_view = $r_data_end->Response->View;
+    $r_array_result = $r_array_view[0]->Result;
+    $latitude1 = $r_array_result[0]->Location->DisplayPosition->Latitude;
+    $longitude1 = $r_array_result[0]->Location->DisplayPosition->Longitude;
+    $waypoint1 = $latitude1 . ',' . $longitude1;
 
-  // Pedestrian
-  $data = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;pedestrian&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
-  $r_data = _heremaps_geocode_routing($data);
+    // Car
+    $data_car = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;car&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+    $r_data_car = _heremaps_geocode_routing($data_car);
 
-  $r_array_route = $r_data->response->route;
-  $pedestrian_route_distance = $r_array_route[0]->summary->distance;
-  $pedestrian_route_travel_time = $r_array_route[0]->summary->travelTime;
-  $pedestrian_route_text = $r_array_route[0]->summary->text;
+    // Pedestrian
+    $data_pedestrian = 'waypoint0='. $waypoint0 . '&waypoint1=' . $waypoint1 . '&mode=fastest;pedestrian&app_id=8V5UOidiiKWZdcJUDoxN&app_code=fKFlIG27I5xkDkLNvxX4mA';
+    $r_data_pedestrian = _heremaps_geocode_routing($data_pedestrian);
 
-  $ary = array("start_loc"=>$start,"end_loc"=>$end,"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text);
-  echo json_encode($ary);
+    if (isset($r_data_car->response->route) && isset($r_data_pedestrian->response->route)) {
+
+      $r_array_route = $r_data_car->response->route;
+      $car_route_distance = $r_array_route[0]->summary->distance;
+      $car_route_travel_time = $r_array_route[0]->summary->travelTime;
+      $car_route_text = $r_array_route[0]->summary->text;
+
+      $r_array_route = $r_data_pedestrian->response->route;
+      $pedestrian_route_distance = $r_array_route[0]->summary->distance;
+      $pedestrian_route_travel_time = $r_array_route[0]->summary->travelTime;
+      $pedestrian_route_text = $r_array_route[0]->summary->text;
+
+      $ary = array("res_status"=>"success","start_loc"=>urldecode($start),"end_loc"=>urldecode($end),"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text);
+      echo json_encode($ary);
+    }
+    else {
+     $ary = array("res_status"=>"error");
+      echo json_encode($ary);      
+    }
+  }
+  else {
+    $ary = array("res_status"=>"error");
+    echo json_encode($ary);    
+  }
+
+
 
 }

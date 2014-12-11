@@ -12,12 +12,18 @@
           data: data,
           success: function(response) {
             var obj = $.parseJSON(response);
-            $("#mod-start").html(obj.start_loc);
-            $("#mod-end").html(obj.end_loc);
-            $("#mod-car-text").html(obj.car_text);
-            $("#mod-pedestrian-text").html(obj.pedestrian_text);
+            if(obj.res_status == "success") {
+              $("#mod-start").html(obj.start_loc);
+              $("#mod-end").html(obj.end_loc);
+              $("#mod-car-text").html(obj.car_text);
+              $("#mod-pedestrian-text").html(obj.pedestrian_text);
 
-            $("#myModal").modal('show');
+              $("#myModal").modal('show');              
+            }
+            else {
+              alert("Routing failed!");
+            }
+
           }
         });
     });
