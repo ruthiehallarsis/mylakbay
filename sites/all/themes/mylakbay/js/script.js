@@ -6,7 +6,7 @@
       var end = $("#end_location").val();
       var data = { start : start, end : end };
 
-        $.ajax({
+        /*$.ajax({
           type: "GET",
           url: Drupal.settings.basePath + "show-result",
           data: data,
@@ -25,7 +25,7 @@
             }
 
           }
-        });
+        });*/
     });
 
     $('.tabs .tab-links a').on('click', function(e)  {
@@ -35,8 +35,36 @@
       e.preventDefault();
     });
 
-    $('#pop-trigger').click(function () {
-      $('.pop-wrapper').show();
+    $('#pop-trigger').click(function(e) {
+
+      e.preventDefault();
+      var start = $("#start_location").val();
+      var end = $("#end_location").val();
+      var data = { start : start, end : end };
+
+      $.ajax({
+        type: "GET",
+        url: Drupal.settings.basePath + "show-result",
+        data: data,
+        success: function(response) {
+          var obj = $.parseJSON(response);
+          if(obj.res_status == "success") {
+            $(".pop-wrapper #mod-start").html(obj.start_loc);
+            $(".pop-wrapper #mod-end").html(obj.end_loc);
+            $(".pop-wrapper #mod-car-text").html(obj.car_text);
+            $(".pop-wrapper #mod-pedestrian-text").html(obj.pedestrian_text);
+
+            $('.pop-wrapper').show();              
+          }
+          else {
+            alert("Routing failed!");
+          }
+
+        }
+      });
+
+
+      
     });
 
     $('.close-button').click(function() {

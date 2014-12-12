@@ -144,7 +144,7 @@
     </div>
     <div class="pop-body">
       <div class="dist-places">
-        <h1>Pasay to Antipolo</h1>
+        <h1><span id="mod-start"></span> to <span id="mod-end"></span></h1>
       </div>
       <div class="tabs">
         <ul class="tab-links">
@@ -153,11 +153,10 @@
         </ul>
         <div class="tab-content">
           <div id="tab1" class="tab active">
-            
+            <span id="mod-car-text"></span>
           </div>
-
           <div id="tab2" class="tab">
-            
+            <span id="mod-pedestrian-text"></span>
           </div>
         </div>
       </div>
