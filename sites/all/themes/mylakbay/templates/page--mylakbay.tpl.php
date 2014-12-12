@@ -107,6 +107,7 @@
       </div>
       <input type="button" id="findRoute" value="Find Route" />
       <input type="button" id="modal-trigger" value="See Results" />
+      <input type="button" id="pop-trigger" value="open" />
       </br/>
     </div>
     <div id="directions" style="float:left; color: rgb(102, 102, 102);height:334px;overflow:auto;width:500px; max-width: 500px;"></div>
@@ -132,6 +133,37 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="pop-wrapper">
+  <div class="inner">
+    <div class="pop-top">
+      <h2 class="long-distance">This trip wouldn't take long.<br>Have a safe trip, Lovey!</h2>
+    </div>
+    <div class="pop-body">
+      <div class="dist-places">
+        <h1>Pasay to Antipolo</h1>
+      </div>
+      <div class="tabs">
+        <ul class="tab-links">
+          <li class="active"><a href="#tab1">RIDE YOUR CAR?</a></li>
+          <li><a href="#tab2">GONNA WALK?</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="tab1" class="tab active">
+            
+          </div>
+
+          <div id="tab2" class="tab">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-footer">
+      <a class="close-button">CLOSE</a>
     </div>
   </div>
 </div>

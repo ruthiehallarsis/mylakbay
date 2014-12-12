@@ -6,18 +6,18 @@
   font-style: normal;
 }
 /* Variables */
-/* line 10, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 html, body {
   height: 100%;
   width: 100%;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 body {
   position: fixed;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 .page-mylakbay .main-container.container {
   width: 100%;
   padding-right: 0px;
@@ -25,52 +25,52 @@ body {
   height: 100%;
   background: url(../images/back.jpg) repeat;
 }
-/* line 33, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 .page-mylakbay .main-container.container #mapContainer {
   width: 75% !important;
   float: right !important;
   height: 100% !important;
   background: #fff;
 }
-/* line 39, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions {
   overflow: auto;
   z-index: 0;
   height: auto !important;
 }
-/* line 43, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 .page-mylakbay .main-container.container #directions ol {
   background: #fff;
   margin-bottom: 0px;
 }
-/* line 48, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .page-mylakbay .main-container.container #left-side {
   width: 25%;
   float: left;
   height: 100%;
   overflow-y: auto;
 }
-/* line 55, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 .page-mylakbay .main-container.container #left-side > div {
   width: 100% !important;
 }
-/* line 60, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 .page-mylakbay #fromSearchBox > span,
 .page-mylakbay #toSearchBox > span {
   display: none;
 }
-/* line 65, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .page-mylakbay #fromSearchBox,
 .page-mylakbay #toSearchBox {
   margin-top: 15px;
   position: relative;
 }
-/* line 69, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .page-mylakbay #fromSearchBox span,
 .page-mylakbay #toSearchBox span {
   color: #fff;
 }
-/* line 72, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .page-mylakbay #fromSearchBox input,
 .page-mylakbay #toSearchBox input {
   width: 100%;
@@ -88,7 +88,7 @@ body {
   text-transform: uppercase;
   font-family: 'CABNDWeb-Bold';
 }
-/* line 87, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list,
 .page-mylakbay #toSearchBox .search-list {
   position: absolute;
@@ -100,40 +100,40 @@ body {
   z-index: 1;
   border-radius: 10px;
 }
-/* line 96, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl,
 .page-mylakbay #toSearchBox .search-list dl {
   margin: 0px;
 }
-/* line 98, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd,
 .page-mylakbay #toSearchBox .search-list dl dd {
   padding: 10px 10px 10px 25px;
   display: block;
 }
-/* line 102, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd:hover span,
 .page-mylakbay #toSearchBox .search-list dl dd:hover span {
   color: #e10000;
 }
-/* line 106, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dd span,
 .page-mylakbay #toSearchBox .search-list dl dd span {
   color: #787878;
 }
-/* line 111, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl dt.title,
 .page-mylakbay #toSearchBox .search-list dl dt.title {
   padding: 10px 10px 5px 10px;
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 118, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .page-mylakbay #fromSearchBox .search-list dl .suggest-search dd:last-child span,
 .page-mylakbay #toSearchBox .search-list dl .suggest-search dd:last-child span {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 125, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .page-mylakbay #fromSearchBox ::-webkit-input-placeholder,
 .page-mylakbay #toSearchBox ::-webkit-input-placeholder {
   color: #fff;
@@ -143,7 +143,7 @@ body {
   font-size: 1.875rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 133, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .page-mylakbay #fromSearchBox :-moz-placeholder,
 .page-mylakbay #toSearchBox :-moz-placeholder {
   /* Firefox 18- */
@@ -154,7 +154,7 @@ body {
   font-size: 1.875rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 141, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .page-mylakbay #fromSearchBox ::-moz-placeholder,
 .page-mylakbay #toSearchBox ::-moz-placeholder {
   /* Firefox 19+ */
@@ -165,7 +165,7 @@ body {
   font-size: 1.875rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 149, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .page-mylakbay #fromSearchBox :-ms-input-placeholder,
 .page-mylakbay #toSearchBox :-ms-input-placeholder {
   color: #fff;
@@ -175,7 +175,7 @@ body {
   font-size: 1.875rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 158, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .page-mylakbay input[type='button'] {
   width: 100%;
   border: none;
@@ -190,13 +190,144 @@ body {
   outline: none;
   font-size: 30px;
   font-size: 1.875rem;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px 6px #a17800;
   -moz-box-shadow: inset 0 0 6px 6px #a17800;
   box-shadow: inset 0 0 6px 6px #a17800;
   border: 1px solid #ddb40f;
 }
-/* line 178, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .page-mylakbay input[type='button']:hover {
   background: #e7be19;
+}
+
+/* line 181, ../sass/style.scss */
+.pop-wrapper {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  overflow: auto;
+  display: none;
+}
+/* line 190, ../sass/style.scss */
+.pop-wrapper .inner {
+  width: 633px;
+  min-height: 300px;
+  background: #fff;
+  position: relative;
+  margin: 30px auto;
+  border-radius: 20px;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+  font-family: 'CABNDWeb-Bold';
+  padding-bottom: 30px;
+}
+/* line 202, ../sass/style.scss */
+.pop-wrapper .inner .pop-top h2 {
+  font-family: 'CABNDWeb-Bold';
+  color: #433e7d;
+  background: url(../images/stick.png) no-repeat;
+  background-size: 190px auto;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  display: inline-block;
+  width: 100%;
+  margin: 15px 0 0 0;
+  padding: 60px 10px 70px 200px;
+}
+/* line 216, ../sass/style.scss */
+.pop-wrapper .inner .pop-footer {
+  text-align: right;
+  padding: 0 30px;
+}
+/* line 219, ../sass/style.scss */
+.pop-wrapper .inner .pop-footer a {
+  display: inline-block;
+  background: #e8b816;
+  color: #fff;
+  font-family: 'CABNDWeb-Bold';
+  border-radius: 8px;
+  padding: 7px 10px 10px;
+  font-size: 17px;
+  margin-top: 5px;
+}
+/* line 232, ../sass/style.scss */
+.pop-wrapper .inner .pop-body .dist-places {
+  margin-bottom: 15px;
+}
+/* line 235, ../sass/style.scss */
+.pop-wrapper .inner .pop-body h1 {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-family: 'CABNDWeb-Bold';
+  text-transform: uppercase;
+  background: #433e7d;
+  color: #e8b816;
+  margin: 0;
+  padding: 7px 10px 10px 10px;
+}
+/* line 249, ../sass/style.scss */
+.pop-wrapper .tabs {
+  width: 100%;
+  display: inline-block;
+  padding: 0 30px;
+  /*----- Content of Tabs -----*/
+}
+/* line 254, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 257, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+/* line 262, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links li {
+  list-style: none;
+  list-style-type: none;
+  display: inline-block;
+}
+/* line 267, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links li.active a {
+  padding: 15px 20px 10px 20px;
+  background: #e8b816;
+}
+/* line 273, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #deae0c;
+  padding: 10px 20px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+/* line 282, ../sass/style.scss */
+.pop-wrapper .tabs .tab-links a:hover {
+  text-decoration: none;
+}
+/* line 290, ../sass/style.scss */
+.pop-wrapper .tabs .tab-content {
+  background: #b9b7cc;
+  color: #433e7d;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  min-height: 200px;
+}
+/* line 299, ../sass/style.scss */
+.pop-wrapper .tabs .tab {
+  display: none;
+}
+/* line 303, ../sass/style.scss */
+.pop-wrapper .tabs .tab.active {
+  display: block;
 }
