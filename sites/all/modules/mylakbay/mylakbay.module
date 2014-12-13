@@ -28,6 +28,28 @@ function mylakbay_menu() {
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
+
+  $items['restaurant'] = array(
+    'title' => 'Search Nearby Restaurant',
+    'page callback' => '_show_nearby_restaurant',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['malls'] = array(
+    'title' => 'Search Nearby Malls',
+    'page callback' => '_show_nearby_mall',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['helper'] = array(
+    'title' => 'Map Helper',
+    'page callback' => '_show_helper',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -35,6 +57,33 @@ function _mylakbay_main_page() {
 
   $self_mylakbay = array(
     '#theme' => 'mylakbay'
+  );
+  return drupal_render($self_mylakbay);
+
+}
+
+function _show_nearby_restaurant() {
+
+  $self_mylakbay = array(
+    '#theme' => 'restaurant'
+  );
+  return drupal_render($self_mylakbay);
+
+}
+
+function _show_nearby_mall() {
+
+  $self_mylakbay = array(
+    '#theme' => 'malls'
+  );
+  return drupal_render($self_mylakbay);
+
+}
+
+function _show_helper() {
+
+  $self_mylakbay = array(
+    '#theme' => 'helper'
   );
   return drupal_render($self_mylakbay);
 
@@ -106,7 +155,7 @@ function _show_result_ajax() {
       $pedestrian_route_travel_time = $r_array_route[0]->summary->travelTime;
       $pedestrian_route_text = $r_array_route[0]->summary->text;
 
-      $ary = array("res_status"=>"success","start_loc"=>urldecode($start),"end_loc"=>urldecode($end),"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text,"car_route_distance"=>$car_route_distance,"car_route_travel_time"=>$car_route_travel_time,"pedestrian_route_distance"=>$pedestrian_route_distance,"pedestrian_route_travel_time"=>$pedestrian_route_travel_time);
+      $ary = array("res_status"=>"success","start_loc"=>urldecode($start),"end_loc"=>urldecode($end),"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text,"car_route_distance"=>$car_route_distance,"car_route_travel_time"=>$car_route_travel_time,"pedestrian_route_distance"=>$pedestrian_route_distance,"pedestrian_route_travel_time"=>$pedestrian_route_travel_time,"waypoint1"=>$waypoint1);
       echo json_encode($ary);
     }
     else {
