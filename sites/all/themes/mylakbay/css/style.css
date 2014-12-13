@@ -208,6 +208,7 @@ body {
   height: 100%;
   top: 0px;
   overflow: auto;
+  display: none;
 }
 /* line 190, ../sass/style.scss */
 .pop-wrapper .inner {
