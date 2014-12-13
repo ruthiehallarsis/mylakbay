@@ -73,61 +73,14 @@
  * @ingroup themeable
  */
 $waypoint = $_GET['waypoint'];
-
+$location = $_GET['location'];
 $longlat = explode(",", $waypoint);
 ?>
 
       <script src="http://js.cit.api.here.com/se/2.5.4/jsl.js?with=places" type="text/javascript" charset="utf-8"></script>
 
   <a class="anchor" name="Category search and detailed results"></a>
-  <h3>Category search and detailed results</h3>
-  <div> 
-    <p>
-      In this example, you can perform a category search, then select a place from the list of results to
-      view the full details. The detailed information includes contact details, a map, opening
-      hours, photographs and a list of reviews with ratings.
-    </p>
-  
-    <p>The body of the HTML page contains:</p>
-  
-    <p>
-      <a name="topic-1__ul_f01ce817-cc06-4e29-a2d1-ddb4dd187282"></a>
-    </p>
-    <ul id="topic-1__ul_f01ce817-cc06-4e29-a2d1-ddb4dd187282">
-      <li>the Category Search Widget</li>
-      <li>a list element to display the results</li>
-      <li>an element in which the details of the selected place are shown</li>
-    </ul>
-    <p>
-      The implementation obtains a Places API category search object, by calling
-      <code>nokia.places.widgets.CategoryBox()</code>, passing to it:
-    </p>
-    <p>
-      <a name="topic-1__ul_7e33aa0a-9c52-4aa4-af1a-50044fe7e9f5"></a>
-    </p>
-    <ul id="topic-1__ul_7e33aa0a-9c52-4aa4-af1a-50044fe7e9f5">
-      <li>the id of the HTML element that contains the visible category search widget</li>
-      <li>a function that provides the location of the search center</li>
-    </ul>
-    <p>
-      <code>nokia.places.widgets.Place</code> is instantiated with the id of the HTML element
-      which is to display the details of the place chosen by the user from the search results.
-    </p>
-    <p>
-      For the search result, an instance of <code>nokia.places.widgets.ResultList</code> is created with
-      the following parameters:
-    </p>
-    <p>
-      <a name="topic-1__ul_8f6fe771-c290-419f-9ae9-0baf55df36d9"></a>
-    </p>
-    <ul id="topic-1__ul_8f6fe771-c290-419f-9ae9-0baf55df36d9">
-      <li>the id of the HTML to display the results</li>
-      <li>a list of event specifiers, whose place name element provides an event handler for a click
-        on a list item; the handler causes the <code>PlacesPlayer</code> object to fetch  the details for the
-        selected place
-      </li>
-    </ul>
-  </div>
+  <h3>Category search and detailed for <?php echo $location; ?></h3>
 
   <table cellspacing="2">
     <tr>
