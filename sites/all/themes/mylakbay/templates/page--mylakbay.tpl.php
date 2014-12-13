@@ -148,6 +148,8 @@
       <span id="map_helper">
         <?php echo l('Search for stuff', 'helper', array('attributes' => array('id' => 'map_helper_link', 'target' => '_blank'))); ?>
       </span>
+      <span id="quick">
+      </span>
     </div>
     <div class="pop-footer">
       <a class="close-button">CLOSE</a>
