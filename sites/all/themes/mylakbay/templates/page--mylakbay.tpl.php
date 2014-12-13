@@ -145,6 +145,9 @@
           </div>
         </div>
       </div>
+      <span id="quick_info">
+        <iframe src="http://www.w3schools.com" id="quick"></iframe>
+      </span>
       <span id="map_helper">
         <?php echo l('Search for stuff', 'helper', array('attributes' => array('id' => 'map_helper_link', 'target' => '_blank'))); ?>
       </span>
