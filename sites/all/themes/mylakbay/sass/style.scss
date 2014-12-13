@@ -37,6 +37,7 @@ body {
       overflow: auto;
       z-index: 0;
       height: auto !important;
+      padding-bottom: 20px;
       ol {
         background: #fff;
         margin-bottom: 0px;
@@ -378,4 +379,25 @@ body {
     
 
 
+}
+
+.page-helper {
+  table {
+    width: 100%;
+  }
+  #csResultList,
+  #csPlaceWidget {
+    width: 100%;
+  }
+
+}
+
+.page-helper > h3 {
+  background: $theme-violet;
+  color: #e8b816;
+  margin: 0; 
+  padding: 0;
+  padding: 20px;
+  font-family: 'CABNDWeb-Bold';
+  text-transform: uppercase;
 }
