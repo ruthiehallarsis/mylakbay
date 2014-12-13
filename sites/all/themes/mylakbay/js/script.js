@@ -66,24 +66,24 @@
             var walk_class = '';
 
             if (pedestrian_distance >= 10000) {
-              header_text_walk = 'This is a very long walk!';
+              header_text_walk = 'Whoaa! This is a very long walk! Please make sure to have enough water for this!.';
               walk_class = 'w_verylong';
             } else if ( pedestrian_distance >= 5000 && pedestrian_distance <= 9999) {
-              header_text_walk = 'This is a not so long walk!';
+              header_text_walk = 'This walk isn\'t that long enough! but its better to have someone with you.';
               walk_class = 'w_notsolong';
             } else {
-              header_text_walk = 'This is a short walk!';
+              header_text_walk = 'This should be short walk! but beware of snatchers!';
               walk_class = 'w_short';
             }
 
-            if (car_distance >= 20000) {
-              header_car_walk = 'This is a very long car ride!';
+            if (car_distance >= 30000) {
+              header_car_walk = 'This ride is very long! its better to have enough foods with you!';
               car_class = 'c_verylong';
-            } else if (car_distance >= 10000 && pedestrian_distance <= 19999) {
-              header_car_walk = 'This is a not so car ride!';
+            } else if (car_distance >= 15000 && pedestrian_distance <= 29999) {
+              header_car_walk = 'This ride shouldn\'t be that long enough! Take care, lovey!';
               car_class = 'c_notsolong';
             } else {
-              header_car_walk = 'This is a car ride!';
+              header_car_walk = 'This should be a very short ride for you, babe!';
               car_class = 'c_short';
             }
 

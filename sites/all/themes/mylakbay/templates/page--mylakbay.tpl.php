@@ -146,9 +146,7 @@
         </div>
       </div>
       <span id="map_helper">
-        <ul>
-            <li><?php echo l('Map Helper', 'helper', array('attributes' => array('id' => 'map_helper', 'target' => '_blank'))); ?></li>
-        </ul>
+        <?php echo l('Search for stuff', 'helper', array('attributes' => array('id' => 'map_helper_link', 'target' => '_blank'))); ?>
       </span>
     </div>
     <div class="pop-footer">

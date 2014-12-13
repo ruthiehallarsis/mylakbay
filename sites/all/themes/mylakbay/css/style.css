@@ -223,7 +223,23 @@ body {
   font-family: 'CABNDWeb-Bold';
   padding-bottom: 30px;
 }
-/* line 203, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
+.pop-wrapper .inner #map_helper {
+  display: block;
+  margin-top: 10px;
+}
+/* line 205, ../sass/style.scss */
+.pop-wrapper .inner #map_helper a {
+  background: #433e7d;
+  display: block;
+  width: 100%;
+  color: #e8b816;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/* line 219, ../sass/style.scss */
 .pop-wrapper .inner .pop-top h2 {
   font-family: 'CABNDWeb-Bold';
   color: #433e7d;
@@ -235,7 +251,7 @@ body {
   margin: 15px 0 0 0;
   padding: 60px 10px 90px 200px;
 }
-/* line 216, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .pop-wrapper .inner .pop-top .w_verylong,
 .pop-wrapper .inner .pop-top .c_verylong {
   background: url(../images/sad.png) no-repeat;
@@ -243,7 +259,7 @@ body {
   background-position-x: 2%;
   background-position-y: 0%;
 }
-/* line 223, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .pop-wrapper .inner .pop-top .w_notsolong,
 .pop-wrapper .inner .pop-top .c_notsolong {
   background: url(../images/notso.png) no-repeat;
@@ -251,7 +267,7 @@ body {
   background-position-x: 2%;
   background-position-y: 0%;
 }
-/* line 230, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .pop-wrapper .inner .pop-top .w_short,
 .pop-wrapper .inner .pop-top .c_short {
   background: url(../images/smiley.png) no-repeat;
@@ -259,12 +275,12 @@ body {
   background-position-x: 2%;
   background-position-y: 0%;
 }
-/* line 239, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .pop-wrapper .inner .pop-footer {
   text-align: right;
   padding: 0 30px;
 }
-/* line 242, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .pop-wrapper .inner .pop-footer a {
   display: inline-block;
   background: #e8b816;
@@ -275,11 +291,11 @@ body {
   font-size: 17px;
   margin-top: 5px;
 }
-/* line 255, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .pop-wrapper .inner .pop-body .dist-places {
   margin-bottom: 15px;
 }
-/* line 259, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .pop-wrapper .inner .pop-body h1 {
   text-align: center;
   display: inline-block;
@@ -293,36 +309,36 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-/* line 275, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .pop-wrapper .tabs {
   width: 100%;
   display: inline-block;
   padding: 0 30px;
   /*----- Content of Tabs -----*/
 }
-/* line 280, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links {
   margin: 0px;
   padding: 0px;
 }
-/* line 283, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links:after {
   display: block;
   clear: both;
   content: '';
 }
-/* line 288, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links li {
   list-style: none;
   list-style-type: none;
   display: inline-block;
 }
-/* line 293, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links li.active a {
   padding: 15px 20px 11px 20px;
   background: #e8b816;
 }
-/* line 299, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links a {
   display: inline-block;
   text-decoration: none;
@@ -334,11 +350,11 @@ body {
   font-size: 30px;
   font-size: 1.875rem;
 }
-/* line 308, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .pop-wrapper .tabs .tab-links a:hover {
   text-decoration: none;
 }
-/* line 316, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content {
   background: #fff;
   color: #433e7d;
@@ -347,7 +363,7 @@ body {
   border-bottom-left-radius: 9px;
   min-height: 200px;
 }
-/* line 324, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content #mod-car-text,
 .pop-wrapper .tabs .tab-content #mod-pedestrian-text {
   background: #433e7d;
@@ -359,7 +375,7 @@ body {
   font-size: 20px;
   margin-top: 20px;
 }
-/* line 334, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content #mod-car-text .length, .pop-wrapper .tabs .tab-content #mod-car-text .time,
 .pop-wrapper .tabs .tab-content #mod-pedestrian-text .length,
 .pop-wrapper .tabs .tab-content #mod-pedestrian-text .time {
@@ -367,21 +383,21 @@ body {
   font-weight: 900;
   color: #fff;
 }
-/* line 340, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content .others {
   text-align: center;
 }
-/* line 342, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content .others p {
   padding: 30px 15px;
   font-size: 20px;
   color: #ca9a00;
 }
-/* line 351, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .pop-wrapper .tabs .tab {
   display: none;
 }
-/* line 355, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 .pop-wrapper .tabs .tab.active {
   display: block;
 }

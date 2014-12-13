@@ -199,6 +199,22 @@ body {
     font-family: 'CABNDWeb-Bold';
     padding-bottom: 30px;
 
+    #map_helper {
+      display: block;
+      margin-top: 10px;
+      a {
+        background: $theme-violet;
+        display: block;
+        width: 100%;
+        color: #e8b816;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+
+    }
+
     .pop-top {
       h2{
         font-family: 'CABNDWeb-Bold';
