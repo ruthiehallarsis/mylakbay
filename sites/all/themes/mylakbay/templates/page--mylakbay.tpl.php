@@ -139,12 +139,9 @@
 
 <div class="pop-wrapper">
   <div class="inner">
-    <div class="pop-top">
-      <h2 class="long-distance">This trip wouldn't take long.<br>Have a safe trip, Lovey!</h2>
-    </div>
     <div class="pop-body">
       <div class="dist-places">
-        <h1><span id="mod-start"></span> to <span id="mod-end"></span></h1>
+        <h1><span id="mod-start">PASAY CITY PHILIPPINES</span> to <span id="mod-end">ANTIPOLO PHILIPPINES</span></h1>
       </div>
       <div class="tabs">
         <ul class="tab-links">
@@ -153,10 +150,18 @@
         </ul>
         <div class="tab-content">
           <div id="tab1" class="tab active">
-            <span id="mod-car-text"></span>
+            <div class="pop-top">
+              <h2 class="long-distance">Long Walk</h2>
+            </div>
+            <span id="mod-car-text">The trip takes <span class="length">23.7 km</span> and <span class="time">37 mins</span>.</span>
+            <div class="others"></div>
           </div>
           <div id="tab2" class="tab">
-            <span id="mod-pedestrian-text"></span>
+            <div class="pop-top">
+              <h2 class="long-distance">Long Walk</h2>
+            </div>
+            <span id="mod-pedestrian-text">The trip takes <span class="length">22.8 km</span> and <span class="time">6:25 h</span>.</span>
+            <div class="others"></div>
           </div>
         </div>
       </div>

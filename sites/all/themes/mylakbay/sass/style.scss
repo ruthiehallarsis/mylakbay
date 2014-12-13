@@ -185,31 +185,54 @@ body {
   height: 100%;
   top: 0px;
   overflow: auto;
-  display: none;
+  //display: none;
 
   .inner {
-    width: 633px;
+    width: 700px;
     min-height: 300px;
-    background: #fff;
+    background: #b9b7cc;
     position: relative;
     margin: 30px auto ;
-    border-radius: 20px;
+    border-radius: 25px;
     -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
     backface-visibility: hidden;
     font-family: 'CABNDWeb-Bold';
     padding-bottom: 30px;
+
     .pop-top {
       h2{
         font-family: 'CABNDWeb-Bold';
         color: $theme-violet;
-        background: url(../images/stick.png) no-repeat;
+        //background: url(../images/stick.png) no-repeat;
         background-size: 190px auto;
-        background-position-x: 0%;
+        background-position-x: 2%;
         background-position-y: 0%;
         display: inline-block;
         width: 100%;
         margin: 15px 0 0 0;
-        padding: 60px 10px 70px 200px;
+        padding: 60px 10px 90px 200px;
+      }
+
+      .w_verylong,
+      .c_verylong {
+        background: url(../images/sad.png) no-repeat;
+        background-size: 190px auto;
+        background-position-x: 2%;
+        background-position-y: 0%;
+      }
+      .w_notsolong,
+      .c_notsolong {
+        background: url(../images/notso.png) no-repeat;
+        background-size: 190px auto;
+        background-position-x: 2%;
+        background-position-y: 0%;
+      }
+      .w_short,
+      .c_short {
+        background: url(../images/smiley.png) no-repeat;
+        background-size: 190px auto;
+        background-position-x: 2%;
+        background-position-y: 0%;
       }
     }
 
@@ -231,6 +254,7 @@ body {
     .pop-body {
       .dist-places {
         margin-bottom: 15px;
+        
       }
       h1{
         text-align: center;
@@ -241,7 +265,9 @@ body {
         background: $theme-violet;
         color: #e8b816;
         margin: 0;
-        padding: 7px 10px 10px 10px;
+        padding: 15px 10px 20px 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       } 
     }
   }
@@ -265,7 +291,7 @@ body {
         display: inline-block;
         &.active {
           a {
-            padding: 15px 20px 10px 20px;
+            padding: 15px 20px 11px 20px;
             background: #e8b816;
           }
         }
@@ -288,12 +314,31 @@ body {
 
     /*----- Content of Tabs -----*/
     .tab-content {
-      background: #b9b7cc;
+      background: #fff;
       color: $theme-violet;
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 9px;
       border-top-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-bottom-left-radius: 9px;
       min-height: 200px;
+
+      #mod-car-text,
+      #mod-pedestrian-text {
+        background: $theme-violet;
+        color: #e8b816;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-top: 20px;
+        .length, .time {
+          font-size: 30px;
+          font-weight: 900;
+          color: #fff;
+        }
+      }
     }
 
     .tab {
