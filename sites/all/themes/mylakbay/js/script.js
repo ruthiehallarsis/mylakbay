@@ -95,6 +95,7 @@
             $(".pop-wrapper #mod-end").html(obj.end_loc);
             $(".pop-wrapper #mod-car-text").html(obj.car_text);
             $(".pop-wrapper #mod-pedestrian-text").html(obj.pedestrian_text);
+            $("#restaurant_nearby").attr("href", Drupal.settings.basePath + "restaurant?waypoint=" + obj.waypoint1);
 
             $('.pop-wrapper').show();           
           }
