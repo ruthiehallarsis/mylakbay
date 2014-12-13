@@ -108,7 +108,7 @@
             $("#restaurant_nearby").attr("href", Drupal.settings.basePath + "restaurant?waypoint=" + obj.waypoint1);
             $("#restaurant_malls").attr("href", Drupal.settings.basePath + "malls?waypoint=" + obj.waypoint1);
             $("#map_helper_link").attr("href", Drupal.settings.basePath + "helper?waypoint=" + obj.waypoint1 + "&location=" + obj.end_loc);
-            $('#quick').attr('src',Drupal.settings.basePath + "market-page?title=" + obj.end_loc);
+            $('#quick').attr('src', Drupal.settings.basePath + "market-page?title=" + obj.end_loc);
 
             $('.pop-wrapper').show();           
           }
