@@ -168,11 +168,6 @@
           </div>
         </div>
       </div>
-      <span id="nearby">
-        <ul>
-            <li><?php echo l('Restaurant', 'restaurant', array('attributes' => array('id' => 'restaurant_nearby', 'target' => '_blank'))); ?></li>
-        </ul>
-      </span>
       <span id="map_helper">
         <ul>
             <li><?php echo l('Map Helper', 'helper', array('attributes' => array('id' => 'map_helper', 'target' => '_blank'))); ?></li>
