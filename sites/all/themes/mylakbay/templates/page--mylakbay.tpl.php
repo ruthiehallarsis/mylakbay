@@ -113,29 +113,6 @@
   </div>
 </div>
 
-<div class="bs-example">
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Your Lakbay!</h4>
-        </div>
-        <div class="modal-body">
-          <p><span id="mod-start"></span> to <span id="mod-end"></span></p> <br/>
-          <p>Car</p><br/>
-          <p><span id="mod-car-text"></span></p><br/><br/>
-          <p>Walk</p><br/>
-          <p><span id="mod-pedestrian-text"></span></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="pop-wrapper">
   <div class="inner">
     <div class="pop-body">

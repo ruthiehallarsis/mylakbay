@@ -357,11 +357,9 @@ body {
   padding: 10px;
   text-align: center;
   font-size: 20px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
   margin-top: 20px;
 }
-/* line 336, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 .pop-wrapper .tabs .tab-content #mod-car-text .length, .pop-wrapper .tabs .tab-content #mod-car-text .time,
 .pop-wrapper .tabs .tab-content #mod-pedestrian-text .length,
 .pop-wrapper .tabs .tab-content #mod-pedestrian-text .time {
@@ -369,11 +367,21 @@ body {
   font-weight: 900;
   color: #fff;
 }
-/* line 344, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
+.pop-wrapper .tabs .tab-content .others {
+  text-align: center;
+}
+/* line 342, ../sass/style.scss */
+.pop-wrapper .tabs .tab-content .others p {
+  padding: 30px 15px;
+  font-size: 20px;
+  color: #ca9a00;
+}
+/* line 351, ../sass/style.scss */
 .pop-wrapper .tabs .tab {
   display: none;
 }
-/* line 348, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .pop-wrapper .tabs .tab.active {
   display: block;
 }
