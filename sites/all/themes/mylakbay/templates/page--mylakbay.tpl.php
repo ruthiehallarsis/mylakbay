@@ -105,9 +105,8 @@
           <div rel="searchbox-list" class="search-list"></div>
         </div>
       </div>
-      <input type="button" id="findRoute" value="Find Route" />
-      <input type="button" id="modal-trigger" value="See Results" />
-      <input type="button" id="pop-trigger" value="open" />
+      <input type="button" id="findRoute" value="FIND ROUTE" />
+      <input type="button" id="pop-trigger" value="SEE RESULTS" />
       </br/>
     </div>
     <div id="directions" style="float:left; color: rgb(102, 102, 102);height:334px;overflow:auto;width:500px; max-width: 500px;"></div>
