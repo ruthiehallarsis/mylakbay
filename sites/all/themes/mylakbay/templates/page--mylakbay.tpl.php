@@ -154,14 +154,18 @@
               <h2 class="long-distance">Long Walk</h2>
             </div>
             <span id="mod-car-text">The trip takes <span class="length">23.7 km</span> and <span class="time">37 mins</span>.</span>
-            <div class="others"></div>
+            <div class="others">
+              <p>If this is your average travel for 7 days, you will have <span id="car_average_time_week"></span>hrs and for a year you have <span id="car_average_time_year"></span>hrs</p>
+            </div>
           </div>
           <div id="tab2" class="tab">
             <div class="pop-top">
               <h2 class="long-distance">Long Walk</h2>
             </div>
             <span id="mod-pedestrian-text">The trip takes <span class="length">22.8 km</span> and <span class="time">6:25 h</span>.</span>
-            <div class="others"></div>
+            <div class="others">
+              <p>If this is your average walk for 7 days, you will have <span id="walk_average_time_week"></span>hrs and for a year you have <span id="walk_average_time_year"></span>hrs</p>
+            </div>
           </div>
         </div>
       </div>

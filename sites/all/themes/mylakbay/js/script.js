@@ -54,6 +54,12 @@
             var pedestrian_distance =  parseFloat(obj.pedestrian_route_distance);
             var pedestrian_travel =  parseFloat(obj.pedestrian_route_travel_time);
 
+            var pedestrian_average_time_week =  ((pedestrian_travel * 7) / 60 ) / 60;
+            var pedestrian_average_time_year =  ((pedestrian_travel * 365) / 60 ) / 60;
+
+            var car_average_time_week =  ((car_travel * 7) / 60 ) / 60;
+            var car_average_time_year =  ((car_travel * 365) / 60 ) / 60;
+
             var header_text_walk = '';
             var header_car_walk = '';
             var car_class = '';
@@ -89,7 +95,11 @@
             $('#tab2 h2').removeClass();
             $('#tab2 h2').addClass(walk_class);
 
-            //alert(final_car_distance + 'km ' + car_travel +' and '+ pedestrian_distance +' '+ pedestrian_travel);
+            $('#walk_average_time_week').html(pedestrian_average_time_week.toFixed(2));
+            $('#walk_average_time_year').html(pedestrian_average_time_year.toFixed(2));
+
+            $('#car_average_time_week').html(car_average_time_week.toFixed(2));
+            $('#car_average_time_year').html(car_average_time_year.toFixed(2));
 
             $(".pop-wrapper #mod-start").html(obj.start_loc);
             $(".pop-wrapper #mod-end").html(obj.end_loc);
