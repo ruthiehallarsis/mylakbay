@@ -106,7 +106,7 @@ function _show_result_ajax() {
       $pedestrian_route_travel_time = $r_array_route[0]->summary->travelTime;
       $pedestrian_route_text = $r_array_route[0]->summary->text;
 
-      $ary = array("res_status"=>"success","start_loc"=>urldecode($start),"end_loc"=>urldecode($end),"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text);
+      $ary = array("res_status"=>"success","start_loc"=>urldecode($start),"end_loc"=>urldecode($end),"car_text"=>$car_route_text,"pedestrian_text"=>$pedestrian_route_text,"car_route_distance"=>$car_route_distance,"car_route_travel_time"=>$car_route_travel_time,"pedestrian_route_distance"=>$pedestrian_route_distance,"pedestrian_route_travel_time"=>$pedestrian_route_travel_time);
       echo json_encode($ary);
     }
     else {

@@ -6,18 +6,22 @@
       var end = $("#end_location").val();
       var data = { start : start, end : end };
 
-        /*$.ajax({
+        $.ajax({
           type: "GET",
           url: Drupal.settings.basePath + "show-result",
           data: data,
           success: function(response) {
             var obj = $.parseJSON(response);
             if(obj.res_status == "success") {
+              var car_distance =  obj.car_route_distance;
+              var car_travel =  obj.car_route_travel_time;
+              var pedestrian_distance =  obj.pedestrian_route_distance;
+              var pedestrian_travel =  obj.pedestrian_route_travel_time;
+
               $("#mod-start").html(obj.start_loc);
               $("#mod-end").html(obj.end_loc);
               $("#mod-car-text").html(obj.car_text);
               $("#mod-pedestrian-text").html(obj.pedestrian_text);
-
               $("#myModal").modal('show');              
             }
             else {
@@ -25,7 +29,7 @@
             }
 
           }
-        });*/
+        });
     });
 
     $('.tabs .tab-links a').on('click', function(e)  {
