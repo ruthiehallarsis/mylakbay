@@ -109,7 +109,6 @@
             $("#restaurant_malls").attr("href", Drupal.settings.basePath + "malls?waypoint=" + obj.waypoint1);
             $("#map_helper_link").attr("href", Drupal.settings.basePath + "helper?waypoint=" + obj.waypoint1 + "&location=" + obj.end_loc);
             $('#quick').attr('src',Drupal.settings.basePath + "market-page?title=" + obj.end_loc);
-            alert("test");
 
             $('.pop-wrapper').show();           
           }
